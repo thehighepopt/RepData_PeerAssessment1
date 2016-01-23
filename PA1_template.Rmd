@@ -664,8 +664,9 @@ Adding the YAML with &quot;keep_md: true&quot; will prevent RStudio from erasing
 Loads needed data and creates a data frame without NA values
 
 
-```{r}
-setwd("C:/Users/35148/Documents/GitHub/RepData_PeerAssessment1") ##insert your directory here
+```{r load}
+##insert your directory here, I can't get an auto-set to work
+setwd("C:/Users/35148/Documents/GitHub/RepData_PeerAssessment1") 
 activity <- read.csv("activity.csv")
 activ_no_na <- subset(activity,!is.na(activity[,1]))
 ```
@@ -687,7 +688,7 @@ sumstep <- summarise(group_by(activ_no_na,date),sum(steps))
 A Histogram of total steps by day
 
 
-```{r fig.width=5, fig.height=3}
+```{r hist1}
 hist(as.matrix(sumstep[,2]), breaks = 8, xlab = "Counts of Steps",main = "Histogram: Total Steps per Day")
 ```
 

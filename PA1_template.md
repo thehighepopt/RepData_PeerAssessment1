@@ -666,7 +666,8 @@ Loads needed data and creates a data frame without NA values
 
 
 ```r
-setwd("C:/Users/35148/Documents/GitHub/RepData_PeerAssessment1") ##insert your directory here
+##insert your directory here, I can't get an auto-set to work
+setwd("C:/Users/35148/Documents/GitHub/RepData_PeerAssessment1") 
 activity <- read.csv("activity.csv")
 activ_no_na <- subset(activity,!is.na(activity[,1]))
 ```
@@ -682,26 +683,6 @@ This sums the steps by day using dplyr
 
 ```r
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 sumstep <- summarise(group_by(activ_no_na,date),sum(steps))
 ```
 
