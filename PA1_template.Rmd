@@ -678,7 +678,7 @@ activ_no_na <- subset(activity,!is.na(activity[,1]))
 This sums the steps by day using dplyr
 
 
-``` {r sumstep}
+```{r sumstep}
 library(dplyr)
 sumstep <- summarise(group_by(activ_no_na,date),sum(steps))
 ```
@@ -807,7 +807,6 @@ g$interval <- rownames(g)
 
 library(ggplot2)
 qplot(interval, steps, data = activ_na_replaced, facets = Day_type ~ ., geom = c("line"), xlab = "Interval", ylab = "Number of Steps", main = "Avg Steps by Interval: Weekend v Weekday")
-
 ```
 
 
