@@ -42,13 +42,14 @@ This calculates the mean and median steps per day
 
 
 ```r
-mean <- round(mean(sumstep$Steps),3)
-median <- round(median(sumstep$Steps),3)
+mean <- mean(sumstep$Steps)
+median <- median(sumstep$Steps)
 ```
 
 
 The mean steps per day is 1.0766189 &times; 10<sup>4</sup>
-The median steps per day is 1.0765 &times; 10<sup>4</sup>
+
+The median steps per day is 10765
 
 
 <h2>
@@ -122,8 +123,8 @@ Now we take the mean and median from the 'replaced' data set and compare to the 
 
 
 ```r
-mean_rep <- round(mean(sumstep_rep$Steps_rep),3)
-median_rep <- round(median(sumstep_rep$Steps_rep),3)
+mean_rep <- mean(sumstep_rep$Steps_rep)
+median_rep <- median(sumstep_rep$Steps_rep)
 ```
 
 
@@ -131,7 +132,7 @@ The new mean total steps with NA values replaced is 1.0766181 &times; 10<sup>4</
 
 The new median total steps with NA values replaced is 1.076613 &times; 10<sup>4</sup>
 
-The mean with NAs replaced shows a difference of -0.008
+The mean with NAs replaced shows a difference of -0.0076956
 
 The median with NAs replaced shows a difference of 1.13
 

@@ -229,12 +229,13 @@ names(sumstep) &lt;- c(&quot;Date&quot;, &quot;Steps&quot;)
 
 <p>This calculates the mean and median steps per day</p>
 
-<pre><code class="r">mean &lt;- round(mean(sumstep$Steps),3)
-median &lt;- round(median(sumstep$Steps),3)
+<pre><code class="r">mean &lt;- mean(sumstep$Steps)
+median &lt;- median(sumstep$Steps)
 </code></pre>
 
-<p>The mean steps per day is 1.0766189 &times; 10<sup>4</sup>
-The median steps per day is 1.0765 &times; 10<sup>4</sup></p>
+<p>The mean steps per day is 1.0766189 &times; 10<sup>4</sup></p>
+
+<p>The median steps per day is 10765</p>
 
 <h2>
 <a id="user-content-what-is-the-average-daily-activity-pattern" class="anchor" href="#what-is-the-average-daily-activity-pattern" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is the average daily activity pattern?</h2>
@@ -281,15 +282,15 @@ hist(as.matrix(sumstep_rep[,2]), breaks = 8, xlab = &quot;Counts of Steps&quot;,
 
 <p>Now we take the mean and median from the &#39;replaced&#39; data set and compare to the original</p>
 
-<pre><code class="r">mean_rep &lt;- round(mean(sumstep_rep$Steps_rep),3)
-median_rep &lt;- round(median(sumstep_rep$Steps_rep),3)
+<pre><code class="r">mean_rep &lt;- mean(sumstep_rep$Steps_rep)
+median_rep &lt;- median(sumstep_rep$Steps_rep)
 </code></pre>
 
 <p>The new mean total steps with NA values replaced is 1.0766181 &times; 10<sup>4</sup></p>
 
 <p>The new median total steps with NA values replaced is 1.076613 &times; 10<sup>4</sup></p>
 
-<p>The mean with NAs replaced shows a difference of -0.008</p>
+<p>The mean with NAs replaced shows a difference of -0.0076956</p>
 
 <p>The median with NAs replaced shows a difference of 1.13</p>
 

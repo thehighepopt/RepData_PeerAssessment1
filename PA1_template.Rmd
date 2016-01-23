@@ -37,12 +37,13 @@ This calculates the mean and median steps per day
 
 
 ```{r meanmed}
-mean <- round(mean(sumstep$Steps),3)
-median <- round(median(sumstep$Steps),3)
+mean <- mean(sumstep$Steps)
+median <- median(sumstep$Steps)
 ```
 
 
 The mean steps per day is `r mean`
+
 The median steps per day is `r median`
 
 
@@ -103,8 +104,8 @@ Now we take the mean and median from the 'replaced' data set and compare to the 
 
 
 ```{r rep_meanmed}
-mean_rep <- round(mean(sumstep_rep$Steps_rep),3)
-median_rep <- round(median(sumstep_rep$Steps_rep),3)
+mean_rep <- mean(sumstep_rep$Steps_rep)
+median_rep <- median(sumstep_rep$Steps_rep)
 ```
 
 
