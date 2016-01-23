@@ -671,6 +671,7 @@ activity <- read.csv("activity.csv")
 activ_no_na <- subset(activity,!is.na(activity[,1]))
 ```
 
+
 <h2>
 <a id="user-content-what-is-mean-total-number-of-steps-taken-per-day" class="anchor" href="#what-is-mean-total-number-of-steps-taken-per-day" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is mean total number of steps taken per day?</h2>
 
@@ -681,6 +682,26 @@ This sums the steps by day using dplyr
 
 ```r
 library(dplyr)
+```
+
+```
+## 
+## Attaching package: 'dplyr'
+```
+
+```
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+```
+
+```
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+```
+
+```r
 sumstep <- summarise(group_by(activ_no_na,date),sum(steps))
 ```
 
@@ -693,7 +714,7 @@ A Histogram of total steps by day
 hist(as.matrix(sumstep[,2]), breaks = 8, xlab = "Counts of Steps",main = "Histogram: Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
 
 This calculates the mean and median steps per day
@@ -1005,7 +1026,7 @@ meanint <- summarise(group_by(activ_no_na,interval),round(mean(steps),2))
 plot(meanint, type = "l", col = "blue", lwd = 2, xlab = "Interval", ylab = "Mean(Steps)", main = "Average Steps per Interval")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![plot of chunk meanint](figure/meanint-1.png)
 
 
 
